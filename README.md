@@ -20,16 +20,11 @@ Q, Z                               10
 
 "cabbage" should be scored as worth 14 points:
 
-3 points for C
-
-1 point for A, twice
-
-3 points for B, twice
-
-2 points for G
-
-1 point for E
-
+* 3 points for C
+* 1 point for A, twice
+* 3 points for B, twice
+* 2 points for G
+* 1 point for E
 
 ## Hints
 
