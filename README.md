@@ -25,7 +25,8 @@ Example
 1 point for E
 Hints
 
-```Use the following hash:
+```
+Use the following hash:
 {
   "A" => 1, "B" => 3, "C" => 3, "D" => 2,
   "E" => 1, "F" => 4, "G" => 2, "H" => 4,
@@ -34,14 +35,16 @@ Hints
   "Q" => 10, "R" => 1, "S" => 1, "T" => 1,
   "U" => 1, "V" => 4, "W" => 4, "X" => 8,
   "Y" => 4, "Z" => 10
-}```
+}
+```
 
 Requirements:
 
 The solution should be insensitive to case
 An empty `word` or `nil` score 0
 Use the following interaction model:
-```> game = Scrabble.new
+```
+> game = Scrabble.new
 > game.score("hello")
 => 8
 > game.score("cabbage")
@@ -49,4 +52,5 @@ Use the following interaction model:
 > game.score("")
 => 0
 > game.score(nil)
-=> 0```
+=> 0
+```
