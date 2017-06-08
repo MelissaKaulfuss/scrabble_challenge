@@ -2,7 +2,7 @@
 
 Given a word, compute the scrabble score for that word. If you can, use test-driven development to build this Scrabble-like game.
 
-## Letter Values
+### Letter Values
 
 You will need these:
 ```
@@ -16,22 +16,21 @@ K                                  5
 J, X                               8
 Q, Z                               10
 ```
-## Example
+### Example
 
 "cabbage" should be scored as worth 14 points:
-
+```
 * 3 points for C
 * 1 point for A, twice
 * 3 points for B, twice
 * 2 points for G
 * 1 point for E
-
 ```
-Use the following hash:
 
 ## Hints
 
 Use the following hash:
+
 ```
 {
   "A" => 1, "B" => 3, "C" => 3, "D" => 2,
@@ -46,8 +45,9 @@ Use the following hash:
 
 ## Requirements:
 
-The solution should be insensitive to case
-An empty `word` or `nil` score 0
+1. The solution should be insensitive to case
+2. An empty `word` or `nil` score 0
+
 Use the following interaction model:
 ```
 > game = Scrabble.new
