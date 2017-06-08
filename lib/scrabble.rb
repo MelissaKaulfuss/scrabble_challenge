@@ -1,29 +1,20 @@
-require 'dictionary'
-
 class Scrabble
 
-  def initialize(word)
-    @word = word
-  end
+DICTIONARY = {
+  "A" => 1, "B" => 3, "C" => 3, "D" => 2,
+  "E" => 1, "F" => 4, "G" => 2, "H" => 4,
+  "I" => 1, "J" => 8, "K" => 5, "L" => 1,
+  "M" => 3, "N" => 1, "O" => 1, "P" => 3,
+  "Q" => 10, "R" => 1, "S" => 1, "T" => 1,
+  "U" => 1, "V" => 4, "W" => 4, "X" => 8,
+  "Y" => 4, "Z" => 10
+}
 
-  # def receive_word_input
-  #   puts "hey, let's play scrabble, what's your word?"
-  #   word = STDIN.gets.chomp
-  # end
-
-  def sanitized_string
+  def score(word)
     formatted_word = word.upcase.strip
-    formatted_word.chars.to_a
-  end
+    letters_to_score = formatted_word.chars
 
-  def score
-    sanitized_string.each do | character |
-      dictionary[character]
-       # trying to get to the value by the charachter as a key
-      # now I want to add them together to get the score.
-      # feel like a reduce is the right thing here but I'm confused about how to use
-      # the array items as the keys for the dictionary k,v pairs.
-    end
+    letter_scores_to_add = letters_to_score.map { | char | DICTIONARY[char] }
+    letter_scores_to_add.inject(0) { | sum, a| sum + a }
   end
-
 end

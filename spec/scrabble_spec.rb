@@ -2,31 +2,38 @@ require 'scrabble'
 require 'dictionary'
 
 describe Scrabble do
-  subject(:scrabble) { Scrabble.new }
 
-  it 'starts a new game of scrabble' do
-    expect(game).to eq(Scrabble.new)
-  end
+  let (:game) { Scrabble.new }
+  let (:word) { "cabbage" }
+
 
   describe '#score' do
     context 'when the string contains expected content' do
       it 'returns a number score when given a word' do
-        expect(game.score("cabbage")).to eq(7)
+        expect(game.score(word)).to eq(14)
       end
     end
 
     context 'when the string contains unexpected content' do
-      it 'returns a zero when given an empty string' do
-        expect(game.score(" ")).to eq(0)
+      context 'when it is an empty string' do
+        let(:word) { " " }
+        it 'returns a zero when given an empty string' do
+          expect(game.score).to eq(0)
+        end
       end
 
-      it 'returns a zero when given nothing' do
-        expect(game.score(nil)).to eq(0)
+      context 'when it is nil' do
+        let(:word) { nil }
+        it 'returns a zero when given nothing' do
+          expect(game.score).to eq(0)
+        end
       end
     end
   end
-
 end
+
+
+
 
 # > game = Scrabble.new
 # > game.score("hello")
