@@ -1,5 +1,12 @@
 # Scrabble challenge
 
+## My goals in this exercise
+
+1. To test my knowledge of Ruby/rspec
+2. To focus on using data structures
+3. To try to design things so that it's easy to add new features or changes.
+
+
 Given a word, compute the scrabble score for that word. If you can, use test-driven development to build this Scrabble-like game.
 
 ### Letter Values
@@ -27,7 +34,7 @@ Q, Z                               10
 * 1 point for E
 ```
 
-## Hints
+### Hints
 
 Use the following hash:
 
@@ -43,10 +50,10 @@ Use the following hash:
 }
 ```
 
-## Requirements:
+### Requirements:
 
 1. The solution should be insensitive to case
-2. An empty `word` or `nil` score 0
+2. An empty `word` or `nil` score `0`
 
 Use the following interaction model:
 ```
