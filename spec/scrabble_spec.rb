@@ -1,5 +1,4 @@
 require 'scrabble'
-require 'dictionary'
 
 describe Scrabble do
 
