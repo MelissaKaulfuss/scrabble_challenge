@@ -18,14 +18,14 @@ describe Scrabble do
       context 'when it is an empty string' do
         let(:word) { " " }
         it 'returns a zero when given an empty string' do
-          expect(game.score).to eq(0)
+          expect(game.score(word)).to eq(0)
         end
       end
 
       context 'when it is nil' do
         let(:word) { nil }
         it 'returns a zero when given nothing' do
-          expect(game.score).to eq(0)
+          expect(game.score(word)).to eq(0)
         end
       end
     end

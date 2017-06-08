@@ -11,10 +11,14 @@ DICTIONARY = {
 }
 
   def score(word)
-    formatted_word = word.upcase.strip
-    letters_to_score = formatted_word.chars
+    if word.nil? || word.include?(" ")
+      final_score = 0
+    else
+      formatted_word = word.upcase.strip
+      letters_to_score = formatted_word.chars
 
-    letter_scores_to_add = letters_to_score.map { | char | DICTIONARY[char] }
-    letter_scores_to_add.inject(0) { | sum, a| sum + a }
+      letter_scores_to_add = letters_to_score.map { | char | DICTIONARY[char] }
+      final_score = letter_scores_to_add.inject(0) { | sum, a| sum + a }
+    end
   end
 end
