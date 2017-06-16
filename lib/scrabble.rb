@@ -1,5 +1,7 @@
 class Scrabble
 
+attr_reader :word
+
 DICTIONARY = {
   "A" => 1, "B" => 3, "C" => 3, "D" => 2,
   "E" => 1, "F" => 4, "G" => 2, "H" => 4,
@@ -11,14 +13,11 @@ DICTIONARY = {
 }
 
   def score(word)
-    if word.nil? || word.include?(" ")
-      final_score = 0
-    else
-      formatted_word = word.upcase.strip
+    @word = String(word)
+      formatted_word = @word.upcase.strip
       letters_to_score = formatted_word.chars
 
       letter_scores_to_add = letters_to_score.map { | char | DICTIONARY[char] }
       final_score = letter_scores_to_add.inject(0) { | sum, a| sum + a }
-    end
   end
 end
