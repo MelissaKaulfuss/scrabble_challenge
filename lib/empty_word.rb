@@ -1,5 +1,0 @@
-class NilClass
-
-
-
-end
